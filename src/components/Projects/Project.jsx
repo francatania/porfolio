@@ -20,18 +20,18 @@ import gestorMobile4 from '../../assets/projects/gestor_mobile_4.png';
 const Project = () =>{
     const imgsBaboon =[baboonMobile, baboonMobile5, baboonMobile6, baboonMobile2, baboonWeb]
     const titleBaboon = "Baboon Clothes - Ecommerce";
-    const techBaboon = "Tecnologías usadas: React, SASS, Firebase";
+    const techBaboon = "Tecnologías usadas: React, SASS, Firebase.";
     const descriptionBaboon = "Proyecto e-commerce, productos por categoria, barra buscadora, carrito, responsive design.";
     const websiteBaboon = "https://baboonclothes.netlify.app/";
 
     const imgsGestor = [gestorMobile2, gestorMobile3, gestorMobile, gestorMobile4, gestorWeb];
     const titleGestor = "Gestor Gastos";
-    const techGestor = "Tecnologías usadas: React, Tailwind CSS, Node JS, Express JS, Mongo DB";
+    const techGestor = "Tecnologías usadas: React, Tailwind CSS, Node JS, Express JS, Mongo DB.";
     const descriptionGestor = "Gestor de Gastos con sistema de login, gastos, ingresos, multicidad de cuentas, transferencias entre cuentas y gráficos para análisis.";
     const websiteGestor = "https://mi-gestor-gastos.netlify.app/"
 
     return (<>
-        <section className="bg-whiteMag w-full text-oceanBlue flex flex-col items-center mt-[-1px] mb-[-1px] pb-[1px]">
+        <section id="proyectos-web" className="bg-whiteMag w-full text-oceanBlue flex flex-col items-center mt-[-1px] mb-[-1px] pb-[1px]">
             <div className=" w-[70%] flex justify-center items-center h-[10%]">
                 <h2 className="text-center text-3xl font-bold mb-8 ">Proyectos</h2>
             </div>

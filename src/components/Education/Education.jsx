@@ -6,8 +6,8 @@ import ARGProg from "./ARGProg.jsx";
 const Education = () =>{
     return (
         <>
-        <section className="flex flex-col bg-oceanBlue w-full m-auto text-whiteMag">
-            <div className=" w-[70%] m-auto">
+        <section id="educacion-web" className="flex flex-col bg-oceanBlue w-full m-auto text-whiteMag">
+            <div className=" w-[90%] sm:w-[70%] m-auto">
                 <h2 className="text-center text-3xl font-bold mb-8 ">Educación</h2>
             </div>
             <TUP></TUP>

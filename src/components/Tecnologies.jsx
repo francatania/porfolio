@@ -30,11 +30,11 @@ export default function Tecnologies(){
     ];
 
     return (
-        <section className='flex flex-col bg-whiteMag w-full m-auto mb-[-1px] mt-[-1px]'>
-            <div className='w-[70%] m-auto'>
+        <section id="tecn-web" className='flex flex-col bg-whiteMag w-full m-auto mb-[-1px] mt-[-1px]'>
+            <div className='w-[90%] sm:w-[70%] m-auto'>
                 <h2 className='text-center text-3xl font-bold mb-8 text-oceanBlue'>Tecnologías</h2>
             </div>
-            <div className='m-auto flex flex-wrap justify-center items-center w-[70%]'>
+            <div className='m-auto flex flex-wrap justify-center items-center w-[90%] sm:w-[70%]'>
                 <ul className='flex flex-wrap justify-center'>
                     {logos.map((logo, index) => (
                         <li key={index} className='m-2'>

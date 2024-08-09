@@ -54,13 +54,13 @@ const Contact = () =>{
         })
         };
     return (<>
-        <section className="bg-oceanBlue w-full flex flex-col items-center pb-[5rem]">
-            <div className="w-[70%]">
+        <section id="contacto-web" className="bg-oceanBlue w-full flex flex-col items-center pb-[5rem]">
+            <div className="w-[90%] sm:w-[70%]">
                 <h2 className='text-center text-3xl font-bold mb-8 text-whiteMag'>Contacto</h2>
             </div>
 
-            <div className="w-[70%] flex flex-col items-center">
-                <form ref={form} onSubmit={sendEmail} className="flex flex-col w-[50%] gap-2">
+            <div className="w-[90%] sm:w-[70%] flex flex-col items-center">
+                <form ref={form} onSubmit={sendEmail} className="flex flex-col w-[100%] sm:w-[50%] gap-2">
                     <label className="text-whiteMag ">Nombre y Apellido</label>
                     <input type="text" name="user_name" className="bg-whiteMag rounded-sm p-2" required value={formData.name} onChange={writingName}/>
 

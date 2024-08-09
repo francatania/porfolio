@@ -1,6 +1,6 @@
 const TUP = () => {
     return (
-        <article className="w-[70%] h-[30rem] m-auto flex flex-row"> 
+        <article className="w-[90%] sm:w-[70%] h-[35rem] sm:h-[30rem] m-auto flex flex-row"> 
             <div className="flex flex-col items-center h-full w-1/2">
                 <div className="border-2 border-whiteMag rounded-full h-[4rem] w-40 flex items-center justify-center"> 
                     <h4>2024 - Actualidad</h4>
@@ -9,7 +9,7 @@ const TUP = () => {
             </div>
             <div className="flex flex-col w-1/2">
                 <div className="mb-2"> 
-                    <h3 className="text-xl">
+                    <h3 className="text-[1.1rem] sm:text-xl">
                     FRC UTN Tecnicatura Universitaria en Programación
                     </h3> 
                 </div>

@@ -21,8 +21,8 @@ const Carousel = ({ imgs }) => {
             </div>
             
             <div className='absolute inset-0 flex items-center justify-between ' >
-                <button onClick={prevSlide} className="w-[3rem] h-[3rem]  bg-white text-black p-2 rounded-full">{'<'}</button>
-                <button onClick={nextSlide} className="w-[3rem] h-[3rem]  bg-white text-black p-2 rounded-full">{'>'}</button>
+                <button onClick={prevSlide} className="w-[3rem] h-[3rem]  bg-white text-black p-2 rounded-full hover:bg-oceanBlue hover:text-whiteMag transition duration-200">{'<'}</button>
+                <button onClick={nextSlide} className="w-[3rem] h-[3rem]  bg-white text-black p-2 rounded-full hover:bg-oceanBlue hover:text-whiteMag transition duration-200">{'>'}</button>
             </div>
 
             <div className='absolute bottom-4 left-0 right-0 flex items-center justify-center gap-2' >

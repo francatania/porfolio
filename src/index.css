@@ -13,3 +13,23 @@
     padding: 0;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* .image-container {
+    overflow: hidden;
+
+}
+
+.animate-right {
+    opacity: 0;
+    transform: translateX(200%); 
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.right-container.active .animate-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+ */
