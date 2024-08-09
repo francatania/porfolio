@@ -10,31 +10,41 @@ const Contact = () =>{
         message: ''
     });
     const [toast, setToast] = useState(false);
+    const [errorForm, setErrorForm] = useState(false);
 
     const writingName = (e) =>{
         setFormData({
-            name: e.target.value,
-            email: formData.email,
-            message: formData.message});
+            ...formData,
+            name: e.target.value});
     }
 
     const writingEmail = (e) =>{
         setFormData({
-            name: formData.name,
-            email: e.target.value,
-            message: formData.message});
+            ...formData,
+            email: e.target.value});
     }
 
     const writingMessage = (e) =>{
         setFormData({
-            name: formData.name,
-            email: formData.email,
+            ...formData,
             message: e.target.value});
     }
 
+    const validateForm = () => {
+        if (!formData.name || !formData.email || !formData.message) {
+            setErrorForm(true);
+            return false;
+        }
+        setErrorForm(false);
+        return true;
+    }
 
     const sendEmail = (e) => {
         e.preventDefault();
+
+        if(!validateForm()){
+            return;
+        }
     
         emailjs
             .sendForm('service_x8ngf5a', 'template_v8qtvnr', form.current, {
@@ -43,9 +53,11 @@ const Contact = () =>{
             .then(
             () => {
                 console.log('SUCCESS!');
+                showToast();
             },
             (error) => {
                 console.log('FAILED...', error.text);
+                
             },
             );
 
@@ -57,12 +69,15 @@ const Contact = () =>{
         };
 
         const showToast = ()=>{
-            setTimeout(()=>{setToast(true)}, 1000)
+            if(!errorForm){
+                setTimeout(()=>{setToast(true)}, 1000)
             
 
-            setTimeout(()=>{
-                setToast(false)
-            }, 5000)
+                setTimeout(()=>{
+                    setToast(false)
+                }, 5000)
+            }
+
         }
 
     return (<>
@@ -80,9 +95,9 @@ const Contact = () =>{
                     <input type="email" name="user_email" className="bg-whiteMag rounded-sm p-2" required value={formData.email} onChange={writingEmail}/>
 
                     <label className="text-whiteMag">Mensaje</label>
-                    <textarea name="message" style={{ resize: 'none', height: '20rem' }} className="bg-whiteMag rounded-sm p-2" value={formData.message} onChange={writingMessage} />
+                    <textarea required name="message" style={{ resize: 'none', height: '20rem' }} className="bg-whiteMag rounded-sm p-2" value={formData.message} onChange={writingMessage} />
 
-                    <input className="text-whiteMag bg-darkBlue mt-2 p-2 border-whiteMag border-2 rounded-[0.5rem] hover:cursor-pointer transition duration-150 hover:ease-in hover:bg-oceanBlue" type="submit" value="Enviar" onClick={showToast}/>
+                    <input className="text-whiteMag bg-darkBlue mt-2 p-2 border-whiteMag border-2 rounded-[0.5rem] hover:cursor-pointer transition duration-150 hover:ease-in hover:bg-oceanBlue" type="submit" value="Enviar"/>
                 </form>
             </div>
 
