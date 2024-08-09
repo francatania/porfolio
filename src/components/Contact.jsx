@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
+import Toast from "./reusable/Toast.jsx";
 
 const Contact = () =>{
     const form = useRef();
@@ -8,6 +9,7 @@ const Contact = () =>{
         email: '',
         message: ''
     });
+    const [toast, setToast] = useState(false);
 
     const writingName = (e) =>{
         setFormData({
@@ -53,6 +55,16 @@ const Contact = () =>{
             message: ''
         })
         };
+
+        const showToast = ()=>{
+            setTimeout(()=>{setToast(true)}, 1000)
+            
+
+            setTimeout(()=>{
+                setToast(false)
+            }, 5000)
+        }
+
     return (<>
         <section id="contacto-web" className="bg-oceanBlue w-full flex flex-col items-center pb-[5rem]">
             <div className="w-[90%] sm:w-[70%]">
@@ -68,11 +80,13 @@ const Contact = () =>{
                     <input type="email" name="user_email" className="bg-whiteMag rounded-sm p-2" required value={formData.email} onChange={writingEmail}/>
 
                     <label className="text-whiteMag">Mensaje</label>
-                    <textarea name="message" style={{ resize: 'none', height: '20rem' }} className="bg-whiteMag rounded-sm p-2" value={formData.message} onChange={writingMessage}/>
+                    <textarea name="message" style={{ resize: 'none', height: '20rem' }} className="bg-whiteMag rounded-sm p-2" value={formData.message} onChange={writingMessage} />
 
-                    <input className="text-whiteMag bg-darkBlue mt-2 p-2 border-whiteMag border-2 rounded-[0.5rem] hover:cursor-pointer transition duration-150 hover:ease-in hover:bg-oceanBlue" type="submit" value="Enviar" />
+                    <input className="text-whiteMag bg-darkBlue mt-2 p-2 border-whiteMag border-2 rounded-[0.5rem] hover:cursor-pointer transition duration-150 hover:ease-in hover:bg-oceanBlue" type="submit" value="Enviar" onClick={showToast}/>
                 </form>
             </div>
+
+            {toast ? <Toast/> : ''}
         </section>
     </>)
 }

@@ -48,7 +48,7 @@ export function Navbar(){
     
 
     return (
-    <nav className={isScrolled && !isOpen ?"bg-darkBlue w-full h-[3rem] mb-[-1px] font-montserrat fixed z-50 transition duration-200" : "bg-oceanBlue  w-full h-[3rem] mb-[-1px] font-montserrat fixed z-50 transition duration-200" }>
+    <nav className={isScrolled && !isOpen ?"bg-darkBlue w-full h-[3rem] mb-[-1px] font-montserrat fixed z-40 transition duration-200" : "bg-oceanBlue  w-full h-[3rem] mb-[-1px] font-montserrat fixed  transition duration-200 z-40" }>
         <div className="flex justify-around w-full sm:w-[70%] h-full m-auto text-whiteMag">
 
             {isMobile ? ( <>                    
