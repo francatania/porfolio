@@ -15,7 +15,7 @@ const CODER = () =>{
                 </div>
                 <div>
                     <p className="text-sm">
-                        Durante 1 año estudié el stack MERN. La carrera se dividó en Front End y Back End.
+                        Durante 1 año estudié el stack MERN. La carrera se dividió en Front End y Back End.
                         <br />
                         <br />
                         <ul className="list-disc ml-5">
