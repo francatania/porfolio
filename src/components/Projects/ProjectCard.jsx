@@ -11,7 +11,7 @@ const ProjectCard = ({ title, arrayImgs, tech, description, website, videoUrl, r
                 <h3 className="text-xl font-bold sm:text-2xl">{title}</h3>
             </div>
 
-            <div className="w-full h-[60%] flex justify-center items-center">
+            <div className="w-full h-[60%] flex justify-center items-center p-2">
                 {hasVideo ? (
 
                     <iframe
@@ -30,10 +30,10 @@ const ProjectCard = ({ title, arrayImgs, tech, description, website, videoUrl, r
 
             <div className="w-full flex-grow p-2 flex flex-col">
                 <div className="flex">
-                    <p>{tech}</p>
+                    <p><strong>Tecnologías usadas: </strong>{tech}</p>
                 </div>
                 <div className="flex">
-                    <p>{description}</p>
+                    <p><strong>Descripción: </strong>{description}</p>
                 </div>
             </div>
 

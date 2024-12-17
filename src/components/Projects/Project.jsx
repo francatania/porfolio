@@ -20,19 +20,19 @@ import gestorMobile4 from '../../assets/projects/gestor_mobile_4.png';
 const Project = () =>{
     const imgsBaboon =[baboonMobile, baboonMobile5, baboonMobile6, baboonMobile2, baboonWeb]
     const titleBaboon = "Baboon Clothes - Ecommerce";
-    const techBaboon = "Tecnologías usadas: React, SASS, Firebase.";
+    const techBaboon = "React, SASS, Firebase.";
     const descriptionBaboon = "Proyecto e-commerce, productos por categoria, barra buscadora, carrito, responsive design.";
     const websiteBaboon = "https://baboonclothes.netlify.app/";
 
     const imgsGestor = [gestorMobile2, gestorMobile3, gestorMobile, gestorMobile4, gestorWeb];
     const titleGestor = "Gestor Gastos";
-    const techGestor = "Tecnologías usadas: React, Tailwind CSS, Node JS, Express JS, Mongo DB.";
+    const techGestor = "TReact, Tailwind CSS, Node JS, Express JS, Mongo DB.";
     const descriptionGestor = "Gestor de Gastos con sistema de login, gastos, ingresos, multicidad de cuentas, transferencias entre cuentas y gráficos para análisis.";
     const websiteGestor = "https://mi-gestor-gastos.netlify.app/"
 
     const imgsFarmaCordoba = [];
     const titleFarmaCordoba = "FarmaCórdoba";
-    const techFarmaCordoba = "Tecnologías usadas: Vanilla JS, Bootstrap, .NET 8, C#, SQL Server"
+    const techFarmaCordoba = "Vanilla JS, Bootstrap, .NET 8, C#, SQL Server."
     const descriptionFarmaCordoba = "Proyecto integral para Programación y Base de Datos en la Tecnicatura en Programación. Backoffice enfocado para la gestión de un grupo de farmacias. La solución incluye login con sistema de Roles, varios ABMC, apartado de transacciones y dashboards utilizando chart.js. Se dividieron las responsabilidades de validaciones y lógica de negocio entre el backend y la BD utilizando triggers y SP."
     const  videoFarmaCordoba = 'https://www.youtube.com/embed/rncYto-AxHg'
     const repoFarma = 'https://github.com/Leon-rod/FarmaCordoba'
