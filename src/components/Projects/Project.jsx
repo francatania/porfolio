@@ -30,6 +30,13 @@ const Project = () =>{
     const descriptionGestor = "Gestor de Gastos con sistema de login, gastos, ingresos, multicidad de cuentas, transferencias entre cuentas y gráficos para análisis.";
     const websiteGestor = "https://mi-gestor-gastos.netlify.app/"
 
+    const imgsFarmaCordoba = [];
+    const titleFarmaCordoba = "FarmaCórdoba";
+    const techFarmaCordoba = "Tecnologías usadas: Vanilla JS, Bootstrap, .NET 8, C#, SQL Server"
+    const descriptionFarmaCordoba = "Proyecto integral para Programación y Base de Datos en la Tecnicatura en Programación. Backoffice enfocado para la gestión de un grupo de farmacias. La solución incluye login con sistema de Roles, varios ABMC, apartado de transacciones y dashboards utilizando chart.js. Se dividieron las responsabilidades de validaciones y lógica de negocio entre el backend y la BD utilizando triggers y SP."
+    const  videoFarmaCordoba = 'https://www.youtube.com/embed/rncYto-AxHg'
+    const repoFarma = 'https://github.com/Leon-rod/FarmaCordoba'
+
     return (<>
         <section id="proyectos-web" className="bg-whiteMag w-full text-oceanBlue flex flex-col items-center mt-[-1px] mb-[-1px] pb-[1px]">
             <div className=" w-[70%] flex justify-center items-center h-[10%]">
@@ -39,6 +46,8 @@ const Project = () =>{
                 <ProjectCard arrayImgs = {imgsBaboon} title = {titleBaboon} tech = {techBaboon} description={descriptionBaboon} website={websiteBaboon}></ProjectCard>
                 
                 <ProjectCard arrayImgs = {imgsGestor} title = {titleGestor} tech = {techGestor} description={descriptionGestor} website={websiteGestor}></ProjectCard>
+
+                <ProjectCard arrayImgs = {imgsFarmaCordoba} title = {titleFarmaCordoba} tech = {techFarmaCordoba} description={descriptionFarmaCordoba} repository = {repoFarma} videoUrl={videoFarmaCordoba} ></ProjectCard>
                 
             </div>
         </section>

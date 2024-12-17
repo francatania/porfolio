@@ -1,6 +1,6 @@
 const TUP = () => {
     return (
-        <article className="w-[90%] sm:w-[70%] h-[35rem] sm:h-[30rem] m-auto flex flex-row"> 
+        <article className="w-[90%] sm:w-[70%] h-[40rem] sm:h-[30rem] m-auto flex flex-row"> 
             <div className="flex flex-col items-center h-full w-1/2">
                 <div className="border-2 border-whiteMag rounded-full h-[4rem] w-40 flex items-center justify-center"> 
                     <h4>2024 - Actualidad</h4>
@@ -15,15 +15,20 @@ const TUP = () => {
                 </div>
                 <div>
                     <p className="text-sm">
-                        Actualmente estudiando .NET con C# y SQL Server.
-                        <br />
+                        <ul className="list-disc ml-5">
+                            <h4>BACKEND:</h4>
+                            <li>.NET con C#</li>
+                            <li>API</li>
+                            <li>Entity Framework</li>
+                            <li>LINQ</li>
+                        </ul>
                         <br />
                         <ul className="list-disc ml-5">
-                            <h4>.NET:</h4>
-                            <li>POO</li>
-                            <li>Windows Forms</li>
-                            <li>ADO.NET</li>
-                            <li>Creación de ABMC utilizando una BD propia en SQL Server</li>
+                            <h4>FRONTEND:</h4>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>Bootstrap</li>
                         </ul>
                         <br />
                         <ul className="list-disc ml-5">
@@ -33,6 +38,9 @@ const TUP = () => {
                             <li>DML</li>
                             <li>Funciones de agregación</li>
                             <li>Procedimientos almacenados</li>
+                            <li>Triggers</li>
+                            <li>Programación en SQL</li>
+                            <li>Manejo de errores</li>
                         </ul>
                     </p>
                 </div>
