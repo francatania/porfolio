@@ -27,7 +27,7 @@ const Project = () =>{
     const imgsGestor = [gestorMobile2, gestorMobile3, gestorMobile, gestorMobile4, gestorWeb];
     const titleGestor = "Gestor Gastos";
     const techGestor = "React, Tailwind CSS, Node JS, Express JS, Mongo DB.";
-    const descriptionGestor = "Gestor de Gastos con sistema de login, gastos, ingresos, multicidad de cuentas, transferencias entre cuentas y gráficos para análisis.";
+    const descriptionGestor = "Gestor de Gastos con sistema de login, gastos, ingresos, multiplicidad de cuentas, transferencias entre cuentas y gráficos para análisis.";
     const websiteGestor = "https://mi-gestor-gastos.netlify.app/"
 
     const imgsFarmaCordoba = [];
