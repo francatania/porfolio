@@ -12,6 +12,7 @@ import gitHubLogo from '../assets/github.png';
 import tailwindLogo from '../assets/tailwind.png'
 import sassLogo from '../assets/sass.png'
 import typescriptLogo from '../assets/typescript.png';
+import dotNetLogo from '../assets/dotnet.png.png'
 
 export default function Tecnologies(){
     const logos = [
@@ -24,6 +25,7 @@ export default function Tecnologies(){
         { src: tailwindLogo, alt: 'Tailwind' },
         { src: nodeLogo, alt: 'Node.js' },
         { src: csharp, alt: 'C#' },
+        {src: dotNetLogo, alt: 'Dot Net'},
         { src: firebaseLogo, alt: 'Firebase' },
         { src: mongoLogo, alt: 'MongoDB' },
         { src: sqlLogo, alt: 'SQL' },

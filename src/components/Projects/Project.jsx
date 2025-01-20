@@ -42,7 +42,7 @@ const Project = () =>{
 
     const titleABMC = "ABMC Medicamentos";
     const techABMC = "React + Typescript, Tailwind CSS, JWT, .NET 8, C#, SQL Server.";
-    const descriptionABMC = "Proyecto donde se implementó JWT para la autenticación y se practicó React con Typescript.";
+    const descriptionABMC = "Proyecto en el que se utilizó React con TypeScript para el desarrollo del frontend y se implementó JWT para la autenticación en la API.";
     const videoABMC = "https://www.youtube.com/embed/U34WirYqPeQ";
     const repoABMC = [{repository: 'https://github.com/francatania/MedicamentosABMC', description: 'Repositorio Frontend'}, {repository:'https://github.com/francatania/FarmaCordoba_API', description: 'Repositorio Backend'}]
 

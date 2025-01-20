@@ -87,9 +87,10 @@ const ProjectCard = ({ title, arrayImgs, tech, description, website, videoUrl, r
                 <h3 className="text-xl font-bold sm:text-2xl">{title}</h3>
             </div>
 
-            <div className="w-full h-[60%] flex justify-center items-center p-2">
+            
                 {hasVideo ? (
 
+                <div className="w-full h-[40%] flex justify-center items-center p-2">
                     <iframe
                         className="w-full h-full rounded-[1rem]"
                         src={videoUrl}
@@ -98,17 +99,21 @@ const ProjectCard = ({ title, arrayImgs, tech, description, website, videoUrl, r
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
+                </div>
                 ) : (
+                    <div className="w-full h-[60%] flex justify-center items-center p-2">
 
                     <Carousel imgs={arrayImgs} />
-                )}
-            </div>
 
-            <div className="w-full flex-grow p-2 flex flex-col">
-                <div className="flex">
+                    </div>
+                )}
+            
+
+            <div className={hasVideo ? 'w-full h-[50%] p-2 flex flex-col' : 'w-full h-[30%] p-2 flex flex-col '} >
+                <div className="flex h-[30%]">
                     <p><strong>Tecnologías usadas: </strong>{tech}</p>
                 </div>
-                <div className="flex">
+                <div className="flex h-[70%] overflow-y-auto">
                     <p><strong>Descripción: </strong>{description}</p>
                 </div>
             </div>
