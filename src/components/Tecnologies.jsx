@@ -11,12 +11,14 @@ import gitLogo from '../assets/git_logo.png';
 import gitHubLogo from '../assets/github.png';
 import tailwindLogo from '../assets/tailwind.png'
 import sassLogo from '../assets/sass.png'
+import typescriptLogo from '../assets/typescript.png';
 
 export default function Tecnologies(){
     const logos = [
         { src: htmlLogo, alt: 'HTML' },
         { src: cssLogo, alt: 'CSS' },
         { src: jsLogo, alt: 'JavaScript' },
+        {src: typescriptLogo, alt: 'TypeScript'},
         { src: reactLogo, alt: 'React' },
         { src: sassLogo, alt: 'Sass' },
         { src: tailwindLogo, alt: 'Tailwind' },
