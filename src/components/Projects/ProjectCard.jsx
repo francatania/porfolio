@@ -21,7 +21,7 @@ const ProjectCard = ({ title, arrayImgs, tech, description, website, videoUrl, r
                     <br>
                       
                     `
-                  )
+                  ).join('')
                   , 
                 showCloseButton: true,
                 customClass: {
