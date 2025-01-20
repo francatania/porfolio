@@ -18,6 +18,13 @@ const Carousel = ({ imgs }) => {
                         <img src={img} alt={`Slide ${index}`} className="w-full h-full object-cover" />
                     </div>
                 ))}
+            
+
+
+    
+
+
+
             </div>
             
             <div className='absolute inset-0 flex items-center justify-between ' >

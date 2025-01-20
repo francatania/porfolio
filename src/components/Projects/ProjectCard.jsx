@@ -1,9 +1,85 @@
 import { useState } from 'react';
 import Carousel from './Carousel.jsx';
+import Swal from 'sweetalert2';
 
 const ProjectCard = ({ title, arrayImgs, tech, description, website, videoUrl, repository }) => {
     const hasVideo = !!videoUrl; 
     const hasRepository = !!repository;
+    const hasWebSite = !!website;
+
+    const handleLinks = () =>{
+
+        {hasRepository && !hasWebSite?
+            Swal.fire({
+                icon: "info",
+                iconColor: "oceanBlue",
+                html: repository
+                  .map(
+                    (r) => `
+                     <a href="${r.repository}" target="_BLANK" class="underline text-darkBlue "><b><i class="fa-brands fa-github"></i> ${r.description} </b></a> 
+                    <br>
+                    <br>
+                      
+                    `
+                  )
+                  , 
+                showCloseButton: true,
+                customClass: {
+                    confirmButton: "bg-darkBlue",
+                    icon: "text-darkBlue"
+                  }
+              })
+        :
+        hasWebSite && !hasRepository?
+              
+        Swal.fire({
+            icon: "info",
+            iconColor: "oceanBlue",
+            html:  `
+                <a href="${website.website}" target="_BLANK" class="underline text-darkBlue "><b><i class="fa-solid fa-globe"></i> Visitar sitio web</b></a> 
+                `
+              
+              , 
+            showCloseButton: true,
+            customClass: {
+                confirmButton: "bg-darkBlue",
+                icon: "text-darkBlue"
+              }
+          })
+
+          :
+
+          Swal.fire({
+            icon: "info",
+            iconColor: "oceanBlue",
+            html: `
+              ${repository
+                .map(
+                  (r) => `
+                    <a href="${r.repository}" target="_BLANK" class="underline text-darkBlue " autofocus>
+                      <b><i class="fa-brands fa-github"></i> ${r.description}</b>  
+                    </a> 
+                    <br>
+                    <br>
+                  `
+                )
+                .join('')} 
+          
+              <a href="${website.website}" target="_BLANK" class="underline text-darkBlue " autofocus>
+                <b><i class="fa-solid fa-globe"></i> Visitar sitio web</b> 
+              </a>
+            `,
+            showCloseButton: true,
+            customClass: {
+                confirmButton: "bg-darkBlue"
+              }
+          });
+          
+        }
+
+
+    
+    }
 
     return (
         <article className="w-[90%] sm:w-[45%] h-[40rem] border-2 rounded-[2rem] border-oceanBlue text-oceanBlue flex flex-col">
@@ -37,30 +113,13 @@ const ProjectCard = ({ title, arrayImgs, tech, description, website, videoUrl, r
                 </div>
             </div>
 
-               {hasRepository ? 
-                    <div className="mt-auto p-2">
-                           <a
-                               href={repository}
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               className="w-full block text-center p-2"
-                           >
-                               Visitar repositorio
-                           </a>
-                       </div>
+
+            <div className="w-full mt-auto p-2 flex justify-center">
+                            <strong><button onClick={()=>handleLinks()}>Links <i class="fa-solid fa-arrow-up-right-from-square"></i></button></strong>
+            </div>
+
                
-               : 
-               <div className="mt-auto p-2">
-               <a
-                   href={website}
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   className="w-full block text-center p-2"
-               >
-                   Visitar sitio web
-               </a>
-           </div>
-               }
+
 
         </article>
     );
